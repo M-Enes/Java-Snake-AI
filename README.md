@@ -1,5 +1,7 @@
 # Java-Snake-AI
 
+![gif](fastaiplay.gif)
+
 A classic snake game with AI. I challenged myself to build a game structure from scratch using only standard Java and its builtin interface AWT (Abstract Window Toolkit) (no Unity or LibGDX). While it looks basic, it includes concepts like fixed-time-step game loop, double-buffering, clean MVC architecture, and a pathfinding AI that is switchable any time and plays the game better than me.
 
 ## How to Run
