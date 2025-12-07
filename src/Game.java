@@ -11,7 +11,7 @@ public class Game {
     /*** this dimensions value should not be changed */
     private final Dimension canvasDimension = new Dimension(Config.COLUMNS, Config.ROWS);
     private boolean gameContinue = true;
-    private boolean isGamePaused = false;
+    private boolean isGamePaused = true;
     private Frame frame;
     private Insets insets;
     private GameCanvas gameCanvas;
@@ -187,6 +187,7 @@ public class Game {
         // gameCanvas.setVisible(true);
         cardLayout.show(frame, "GameCanvas");
         gameCanvas.requestFocus();
+        isGamePaused = false;
 
         // int innerWidth = frame.getWidth() - insets.left - insets.right;
         // int innerHeight = frame.getHeight() - insets.top - insets.bottom;
