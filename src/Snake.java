@@ -14,7 +14,6 @@ public class Snake {
 
     private int partWidth;
     private int partHeight;
-    private int growthFactor = 1;
 
     public Snake(Dimension canvasDimension, int spawnX, int spawnY, int partWidth, int partHeight) {
         this.body = new ArrayList<>();
@@ -22,12 +21,6 @@ public class Snake {
         this.canvasDimension = canvasDimension;
         this.partWidth = partWidth;
         this.partHeight = partHeight;
-    }
-
-    public void reset() {
-        this.speedVector = new Vector2i(1, 1);
-        this.changeDirection('w');
-        // TODO: Body reset logic should be here
     }
 
     public void changeDirection(Direction direction) {
@@ -159,10 +152,6 @@ public class Snake {
 
     public int getPartHeight() {
         return partHeight;
-    }
-
-    public int getGrowthFactor() {
-        return growthFactor;
     }
 
     public Vector2i getHeadLocation() {

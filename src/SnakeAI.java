@@ -68,17 +68,6 @@ public class SnakeAI {
         return Direction.RIGHT;
     }
 
-    private Vector2i getMovementVector(Direction direction) {
-        if (direction == Direction.UP) {
-            return new Vector2i(0, -1);
-        } else if (direction == Direction.DOWN) {
-            return new Vector2i(0, 1);
-        } else if (direction == Direction.LEFT) {
-            return new Vector2i(-1, 0);
-        }
-        return new Vector2i(1, 0);
-    }
-
     private boolean isMoveSafe(Vector2i nextMove, Vector2i appleVector) {
 
         System.out.println("SnakeAI.isMoveSafe()");

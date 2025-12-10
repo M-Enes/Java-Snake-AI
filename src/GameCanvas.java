@@ -19,8 +19,6 @@ public class GameCanvas extends Canvas {
         this.canvasDimension = canvasDimension;
         this.snake = snake;
         this.apple = apple;
-        // setSize(canvasDimension.width * Config.BLOCK_SIZE, canvasDimension.height *
-        // Config.BLOCK_SIZE);
         this.resources = resources;
         this.random = new Random();
     }
@@ -132,14 +130,8 @@ public class GameCanvas extends Canvas {
 
             if (previous.x == next.x) {
                 bodyImage = resources.getTexture("body_vertical");
-                // offScreenGraphics.fillRect((int) part.x + 5, (int) part.y,
-                // snake.getPartWidth() - 10,
-                // snake.getPartHeight());
             } else if (previous.y == next.y) {
                 bodyImage = resources.getTexture("body_horizontal");
-                // offScreenGraphics.fillRect((int) part.x, (int) part.y + 5,
-                // snake.getPartWidth(),
-                // snake.getPartHeight() - 10);
             } else if ((previous.x < current.x && next.y < current.y) || (next.x < current.x && previous.y < next.y)) {
                 bodyImage = resources.getTexture("body_topleft");
             } else if ((previous.x < current.x && next.y > current.y)
@@ -194,9 +186,6 @@ public class GameCanvas extends Canvas {
 
     private void paintApple() {
         offScreenGraphics.setColor(Color.RED);
-        // offScreenGraphics.fillOval((int) apple.getLocationX(), (int)
-        // apple.getLocationY(), (int) apple.radius,
-        // (int) apple.radius);
         offScreenGraphics.drawImage(resources.getTexture("apple"), apple.getLocationX() * Config.BLOCK_SIZE,
                 apple.getLocationY() * Config.BLOCK_SIZE, apple.getRadius() * Config.BLOCK_SIZE,
                 apple.getRadius() * Config.BLOCK_SIZE, null);
