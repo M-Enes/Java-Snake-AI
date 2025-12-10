@@ -27,7 +27,6 @@ public class SnakeAI {
 
 
     private ArrayList<Vector2i> getBFSPath(Vector2i start, Vector2i target, TreeSet<Vector2i> obstacles) {
-        System.out.println("SnakeAI.getBFSPath()");
         Queue<QueueElement> queue = new LinkedList<QueueElement>();
         TreeSet<Vector2i> visited = new TreeSet<Vector2i>();
         queue.add(new QueueElement(start, new ArrayList<Vector2i>()));
@@ -70,7 +69,6 @@ public class SnakeAI {
 
     private boolean isMoveSafe(Vector2i nextMove, Vector2i appleVector) {
 
-        System.out.println("SnakeAI.isMoveSafe()");
         ArrayList<Vector2i> virtualSnake = new ArrayList<>();
         virtualSnake.addAll(snake.getBody());
         Vector2i virtualHead = nextMove;
@@ -92,7 +90,6 @@ public class SnakeAI {
 
         ArrayList<Vector2i> pathToTail = getBFSPath(virtualHead, virtualTail, obstacles);
 
-        System.out.println("ismovesafe: " + pathToTail != null);
 
         return pathToTail != null;
     }
@@ -118,7 +115,6 @@ public class SnakeAI {
                 }
             }
         }
-        System.out.println("maxdist: " + maxDist);
 
         return bestMove;
     }
@@ -148,7 +144,6 @@ public class SnakeAI {
     public Direction getNextMoveDirection(Apple apple) {
         aiMoveCounter++;
         if(aiMoveCounter >= Config.AI_MOVE_LIMIT) {
-            System.out.println("AI Stuck - Committing Suicide");
             return snake.getDirection();
         }
 

@@ -37,7 +37,6 @@ public class ResourceManager {
             loadSound("hit", "sounds/hit.wav");
             loadSound("music", "sounds/nokiasnakemusic.wav");
 
-            System.out.println("All resources loaded successfully.");
 
         } catch (Exception e) {
             System.out.println("Failed to load resources. Game might crash.");

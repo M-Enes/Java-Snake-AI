@@ -154,10 +154,8 @@ public class Game {
             @Override
             public void keyTyped(KeyEvent e) {
                 char keyChar = e.getKeyChar();
-                System.out.println("Typed: " + keyChar);
                 if (keyChar == 'f' || keyChar == 'F') {
                     if (snake.speedVector.equals(new Vector2i(0, 0))) {
-                        System.out.println("Normal speed");
                         snake.speedVector = new Vector2i(1, 1);
                         isGamePaused = false;
                     } else {
@@ -237,7 +235,6 @@ public class Game {
     }
 
     public void gameOver() {
-        System.out.println("Game Over :(");
         resourceManager.playSound("hit");
         try {
             Thread.sleep(1000); // sleep for a little time to play the sound

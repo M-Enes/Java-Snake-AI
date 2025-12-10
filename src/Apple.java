@@ -51,7 +51,6 @@ public class Apple {
             }
         }
 
-        System.out.println("Apple spawned at " + location.x + " " + location.y);
 
     }
 }
